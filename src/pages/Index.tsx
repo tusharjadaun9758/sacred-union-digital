@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import GaneshSection from "@/components/GaneshSection";
 import CoupleSection from "@/components/CoupleSection";
 import EventsSection from "@/components/EventsSection";
-import SacredFireSection from "@/components/SacredFireSection";
+import FamilySection from "@/components/FamilySection";
 import RSVPSection from "@/components/RSVPSection";
 import VenueSection from "@/components/VenueSection";
 import ContactSection from "@/components/ContactSection";
@@ -14,7 +14,7 @@ const sections = [
   { id: "ganesh", label: "🙏 Ganesh", component: GaneshSection },
   { id: "couple", label: "💑 Couple", component: CoupleSection },
   { id: "events", label: "📜 Events", component: EventsSection },
-  { id: "fire", label: "🔥 Agni", component: SacredFireSection },
+  { id: "family", label: "👨‍👩‍👧‍👦 Family", component: FamilySection },
   { id: "venue", label: "📍 Venue", component: VenueSection },
   { id: "rsvp", label: "💌 RSVP", component: RSVPSection },
   { id: "contact", label: "📞 Contact", component: ContactSection },
