@@ -55,7 +55,7 @@ const EventsSection = () => {
           viewport={{ once: true }}
         >
           <p className="font-shloka text-saffron text-lg mb-2">शुभ कार्यक्रम</p>
-          <h2 className="font-heading text-3xl md:text-5xl text-cream">
+          <h2 className="font-heading text-3xl md:text-5xl text-deep-red">
             Sacred Ceremonies
           </h2>
         </motion.div>
