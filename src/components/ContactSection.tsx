@@ -7,7 +7,7 @@ const contacts = [
 
 const ContactSection = () => {
   return (
-    <section className="py-20 relative" style={{ background: "linear-gradient(180deg, hsl(39 100% 95%), hsl(30 15% 15%))" }}>
+    <section className="py-20 relative bg-temple-gradient">
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="text-center mb-12"
