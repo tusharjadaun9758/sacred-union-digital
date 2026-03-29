@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import SectionDivider from "@/components/SectionDivider";
+import groomImg from "@/assets/groom-portrait.jpg";
+import brideImg from "@/assets/bride-portrait.jpg";
 
 const CoupleSection = () => {
   return (
@@ -23,15 +25,28 @@ const CoupleSection = () => {
           {/* Groom */}
           <motion.div
             className="flex-1 max-w-sm"
-            initial={{ opacity: 0, x: -60 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -60, rotateY: -40 }}
+            whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, type: "spring" as const, stiffness: 60 }}
+            style={{ perspective: 1000 }}
           >
             <div className="border-ornate rounded-sm p-8 text-center bg-card/50 backdrop-blur-sm">
-              <div className="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-gold/50 bg-muted flex items-center justify-center">
-                <span className="text-5xl">🤵</span>
-              </div>
+              <motion.div
+                className="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-gold/50 overflow-hidden"
+                style={{ transformStyle: "preserve-3d" }}
+                whileHover={{ rotateY: 15, rotateX: -10, scale: 1.1 }}
+                transition={{ duration: 0.5, type: "spring" as const }}
+              >
+                <img
+                  src={groomImg}
+                  alt="Rajesh Kumar - The Groom"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  width={512}
+                  height={512}
+                />
+              </motion.div>
               <h3 className="font-heading text-2xl text-deep-red mb-1">Rajesh Kumar</h3>
               <p className="font-body text-muted-foreground italic text-sm mb-4">The Groom</p>
               <p className="font-body text-foreground/80 text-sm leading-relaxed">
@@ -56,15 +71,28 @@ const CoupleSection = () => {
           {/* Bride */}
           <motion.div
             className="flex-1 max-w-sm"
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 60, rotateY: 40 }}
+            whileInView={{ opacity: 1, x: 0, rotateY: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1, type: "spring" as const, stiffness: 60 }}
+            style={{ perspective: 1000 }}
           >
             <div className="border-ornate rounded-sm p-8 text-center bg-card/50 backdrop-blur-sm">
-              <div className="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-gold/50 bg-muted flex items-center justify-center">
-                <span className="text-5xl">👰</span>
-              </div>
+              <motion.div
+                className="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-gold/50 overflow-hidden"
+                style={{ transformStyle: "preserve-3d" }}
+                whileHover={{ rotateY: -15, rotateX: -10, scale: 1.1 }}
+                transition={{ duration: 0.5, type: "spring" as const }}
+              >
+                <img
+                  src={brideImg}
+                  alt="Priya Sharma - The Bride"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                  width={512}
+                  height={512}
+                />
+              </motion.div>
               <h3 className="font-heading text-2xl text-deep-red mb-1">Priya Sharma</h3>
               <p className="font-body text-muted-foreground italic text-sm mb-4">The Bride</p>
               <p className="font-body text-foreground/80 text-sm leading-relaxed">
