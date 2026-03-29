@@ -40,7 +40,7 @@ const card3D = {
     opacity: 1,
     rotateY: 0,
     scale: 1,
-    transition: { delay: i * 0.15, duration: 0.7, type: "spring", stiffness: 80 },
+    transition: { delay: i * 0.15, duration: 0.7, type: "spring" as const, stiffness: 80 },
   }),
   exit: { opacity: 0, rotateY: 90, scale: 0.7, transition: { duration: 0.4 } },
 };
