@@ -62,6 +62,14 @@ const EventsSection = () => {
   const next = () => navigate((active + 1) % events.length);
   const prev = () => navigate((active - 1 + events.length) % events.length);
 
+  // Auto-play: continuously move to next card
+  useEffect(() => {
+    const timer = setInterval(() => {
+      navigate((active + 1) % events.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [active]);
+
   const event = events[active];
 
   return (
