@@ -46,7 +46,7 @@ const events = [
 
 const EventsSection = () => {
   return (
-    <section className="py-20 relative overflow-hidden" style={{ background: "linear-gradient(180deg, hsl(39 100% 95%), hsl(30 20% 18%), hsl(39 100% 95%))" }}>
+    <section className="py-20 relative overflow-hidden bg-temple-gradient">
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="text-center mb-16"
@@ -55,7 +55,7 @@ const EventsSection = () => {
           viewport={{ once: true }}
         >
           <p className="font-shloka text-saffron text-lg mb-2">शुभ कार्यक्रम</p>
-          <h2 className="font-heading text-3xl md:text-5xl text-cream">
+          <h2 className="font-heading text-3xl md:text-5xl text-deep-red">
             Sacred Ceremonies
           </h2>
         </motion.div>
