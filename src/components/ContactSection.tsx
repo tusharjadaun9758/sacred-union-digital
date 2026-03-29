@@ -16,7 +16,7 @@ const ContactSection = () => {
           viewport={{ once: true }}
         >
           <p className="font-shloka text-saffron text-lg mb-2">संपर्क</p>
-          <h2 className="font-heading text-3xl md:text-4xl text-cream">
+          <h2 className="font-heading text-3xl md:text-4xl text-deep-red">
             Family Contacts
           </h2>
         </motion.div>
@@ -34,8 +34,8 @@ const ContactSection = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.2 }}
             >
-              <h3 className="font-heading text-lg text-cream mb-1">{contact.name}</h3>
-              <p className="font-body text-cream/60 text-sm mb-3 italic">{contact.relation}</p>
+              <h3 className="font-heading text-lg text-deep-red mb-1">{contact.name}</h3>
+              <p className="font-body text-foreground/60 text-sm mb-3 italic">{contact.relation}</p>
               <a
                 href={`tel:${contact.phone}`}
                 className="font-body text-saffron hover:text-gold transition-colors text-sm"
@@ -48,13 +48,13 @@ const ContactSection = () => {
 
         {/* Footer */}
         <div className="text-center mt-16 pt-8 border-t border-gold/20">
-          <p className="font-shloka text-cream/50 text-lg mb-2">
+          <p className="font-shloka text-deep-red/60 text-lg mb-2">
             सर्वे भवन्तु सुखिनः
           </p>
-          <p className="font-body text-cream/30 text-xs italic">
+          <p className="font-body text-foreground/50 text-xs italic">
             "May all beings be happy"
           </p>
-          <p className="font-body text-cream/20 text-xs mt-4">
+          <p className="font-body text-foreground/30 text-xs mt-4">
             Made with 🪷 & devotion
           </p>
         </div>
