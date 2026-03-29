@@ -1,16 +1,43 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import HeroSection from "@/components/HeroSection";
+import GaneshSection from "@/components/GaneshSection";
+import CoupleSection from "@/components/CoupleSection";
+import EventsSection from "@/components/EventsSection";
+import SacredFireSection from "@/components/SacredFireSection";
+import RSVPSection from "@/components/RSVPSection";
+import VenueSection from "@/components/VenueSection";
+import ContactSection from "@/components/ContactSection";
+import GoldenParticles from "@/components/GoldenParticles";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  const [entered, setEntered] = useState(false);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-background">
+      <GoldenParticles />
+
+      {!entered ? (
+        <HeroSection onEnter={() => setEntered(true)} />
+      ) : (
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <GaneshSection />
+            <CoupleSection />
+            <EventsSection />
+            <SacredFireSection />
+            <VenueSection />
+            <RSVPSection />
+            <ContactSection />
+          </motion.div>
+        </AnimatePresence>
+      )}
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
