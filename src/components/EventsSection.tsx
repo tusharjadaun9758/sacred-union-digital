@@ -131,16 +131,6 @@ const EventsSection = () => {
                   transformStyle: "preserve-3d",
                 }}
               >
-                {/* Floating icon */}
-                <motion.span
-                  className="text-6xl mb-4 block"
-                  animate={{ y: [0, -8, 0], rotateZ: [0, 5, -5, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  style={{ transform: "translateZ(40px)" }}
-                >
-                  {event.icon}
-                </motion.span>
-
                 <div style={{ transform: "translateZ(30px)" }}>
                   <h3 className="font-heading text-2xl md:text-3xl text-deep-red mb-1">
                     {event.name}
