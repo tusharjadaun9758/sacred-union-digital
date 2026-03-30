@@ -4,6 +4,7 @@ import RadhaKrishnaBackground from "@/components/RadhaKrishnaBackground";
 import PreWeddingGallery from "@/components/PreWeddingGallery";
 import groomImg from "@/assets/groom-portrait.jpg";
 import brideImg from "@/assets/bride-portrait.jpg";
+import radhaKrishnaImg from "@/assets/radha-krishna-bg.jpg";
 
 const CoupleSection = () => {
   return (
