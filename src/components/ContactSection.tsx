@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import RadhaKrishnaBackground from "@/components/RadhaKrishnaBackground";
 
 const contacts = [
   { name: "Shri Mahesh Kumar", relation: "Father of the Groom", phone: "+91 98765 43210" },

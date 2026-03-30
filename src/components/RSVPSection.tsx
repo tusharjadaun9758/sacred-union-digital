@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionDivider from "@/components/SectionDivider";
+import RadhaKrishnaBackground from "@/components/RadhaKrishnaBackground";
 
 const RSVPSection = () => {
   const [response, setResponse] = useState<"accepted" | "declined" | null>(null);

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionDivider from "@/components/SectionDivider";
+import RadhaKrishnaBackground from "@/components/RadhaKrishnaBackground";
 
 import groomFamilyImg from "@/assets/groom-family.jpg";
 import brideFamilyImg from "@/assets/bride-family.jpg";
