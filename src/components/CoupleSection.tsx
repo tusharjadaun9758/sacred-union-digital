@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import SectionDivider from "@/components/SectionDivider";
 import RadhaKrishnaBackground from "@/components/RadhaKrishnaBackground";
+import PreWeddingGallery from "@/components/PreWeddingGallery";
 import groomImg from "@/assets/groom-portrait.jpg";
 import brideImg from "@/assets/bride-portrait.jpg";
 
@@ -104,6 +105,8 @@ const CoupleSection = () => {
             </div>
           </motion.div>
         </div>
+
+        <PreWeddingGallery />
 
         <SectionDivider />
       </div>
