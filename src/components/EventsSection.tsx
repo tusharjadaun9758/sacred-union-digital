@@ -153,6 +153,14 @@ const EventsSection = () => {
                 >
                   {event.description}
                 </p>
+
+                <div
+                  className="mt-4 flex items-center gap-1.5 text-deep-red/70"
+                  style={{ transform: "translateZ(15px)" }}
+                >
+                  <MapPin size={16} className="text-saffron" />
+                  <span className="font-body text-xs">Get Directions</span>
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>
