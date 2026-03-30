@@ -14,7 +14,7 @@ const venuePhotos = [
 
 const VenueSection = () => {
   return (
-    <section className="relative overflow-hidden bg-[#0a0604]">
+    <section className="relative overflow-hidden bg-temple-gradient">
       <RadhaKrishnaBackground />
 
       {/* Hero venue image with overlay */}
@@ -31,7 +31,7 @@ const VenueSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 2, ease: "easeOut" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[#0a0604]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-transparent to-background" />
 
         {/* Floating title over hero */}
         <motion.div
@@ -45,8 +45,8 @@ const VenueSection = () => {
             स्थान
           </p>
           <h2
-            className="font-heading text-4xl md:text-6xl lg:text-7xl tracking-wider drop-shadow-xl"
-            style={{ color: "hsl(39 100% 88%)" }}
+            className="font-heading text-4xl md:text-6xl lg:text-7xl tracking-wider drop-shadow-xl text-deep-red"
+          >
           >
             The Royal Venue
           </h2>
@@ -57,11 +57,9 @@ const VenueSection = () => {
       {/* Venue details card */}
       <div className="relative z-10 -mt-16 px-4">
         <motion.div
-          className="max-w-3xl mx-auto rounded-lg p-8 md:p-12 text-center"
+          className="max-w-3xl mx-auto rounded-lg p-8 md:p-12 text-center border-ornate bg-card/80 backdrop-blur-sm"
           style={{
-            background: "linear-gradient(135deg, hsl(30 20% 8% / 0.95), hsl(30 15% 12% / 0.9))",
-            border: "1px solid hsl(43 72% 52% / 0.25)",
-            boxShadow: "0 30px 80px hsl(0 0% 0% / 0.5), 0 0 60px hsl(43 72% 52% / 0.08), inset 0 1px 0 hsl(43 72% 52% / 0.15)",
+            boxShadow: "0 30px 80px hsl(var(--deep-red) / 0.1), 0 0 60px hsl(var(--gold) / 0.08)",
           }}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -74,8 +72,7 @@ const VenueSection = () => {
           </div>
 
           <motion.h3
-            className="font-heading text-2xl md:text-3xl mb-2"
-            style={{ color: "hsl(39 100% 80%)" }}
+            className="font-heading text-2xl md:text-3xl mb-2 text-deep-red"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -85,15 +82,15 @@ const VenueSection = () => {
           </motion.h3>
 
           <p
-            className="font-body text-sm md:text-base mb-2 italic"
-            style={{ color: "hsl(39 50% 65%)" }}
+            className="font-body text-sm md:text-base mb-2 italic text-muted-foreground"
+          >
           >
             A Heritage Royal Estate
           </p>
 
           <p
-            className="font-body text-sm mb-8"
-            style={{ color: "hsl(39 30% 55%)" }}
+            className="font-body text-sm mb-8 text-foreground/70"
+          >
           >
             42, Palace Road, Jaipur, Rajasthan 302001
           </p>
@@ -104,12 +101,7 @@ const VenueSection = () => {
               (item, i) => (
                 <motion.span
                   key={item}
-                  className="px-4 py-2 rounded-full text-xs font-heading tracking-wider"
-                  style={{
-                    border: "1px solid hsl(43 72% 52% / 0.2)",
-                    color: "hsl(39 80% 70%)",
-                    background: "hsl(43 72% 52% / 0.05)",
-                  }}
+                  className="px-4 py-2 rounded-full text-xs font-heading tracking-wider border border-gold/30 text-deep-red bg-gold/5"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -126,21 +118,8 @@ const VenueSection = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block font-heading text-sm tracking-[0.2em] uppercase
-                       px-10 py-4 rounded-sm transition-all duration-500"
-            style={{
-              background: "linear-gradient(135deg, hsl(43 72% 52% / 0.15), hsl(43 72% 52% / 0.05))",
-              border: "1px solid hsl(43 72% 52% / 0.4)",
-              color: "hsl(39 100% 80%)",
-              boxShadow: "0 0 30px hsl(43 72% 52% / 0.1)",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = "linear-gradient(135deg, hsl(43 72% 52% / 0.3), hsl(43 72% 52% / 0.1))";
-              e.currentTarget.style.boxShadow = "0 0 40px hsl(43 72% 52% / 0.2)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "linear-gradient(135deg, hsl(43 72% 52% / 0.15), hsl(43 72% 52% / 0.05))";
-              e.currentTarget.style.boxShadow = "0 0 30px hsl(43 72% 52% / 0.1)";
-            }}
+                       px-10 py-4 rounded-sm transition-all duration-500
+                       border-2 border-gold/50 text-deep-red hover:bg-gold/10"
           >
             🗺️ Get Directions
           </a>
@@ -150,8 +129,7 @@ const VenueSection = () => {
       {/* Venue photo gallery */}
       <div className="relative z-10 mt-16 pb-20 px-4">
         <motion.p
-          className="text-center font-heading text-lg tracking-[0.3em] uppercase mb-10"
-          style={{ color: "hsl(43 72% 52% / 0.5)" }}
+          className="text-center font-heading text-lg tracking-[0.3em] uppercase mb-10 text-deep-red/50"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -192,10 +170,9 @@ const VenueSection = () => {
               style={{ transformStyle: "preserve-3d" }}
             >
               <div
-                className="overflow-hidden rounded-lg"
+                className="overflow-hidden rounded-lg border border-gold/30"
                 style={{
-                  border: "1px solid hsl(43 72% 52% / 0.2)",
-                  boxShadow: "0 20px 50px hsl(0 0% 0% / 0.4), 0 0 0 1px hsl(43 72% 52% / 0.08)",
+                  boxShadow: "0 20px 50px hsl(var(--deep-red) / 0.1), 0 0 0 1px hsl(var(--gold) / 0.08)",
                 }}
               >
                 <img
@@ -207,17 +184,11 @@ const VenueSection = () => {
                   height={768}
                 />
                 {/* Dark overlay with text */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5">
-                  <h4
-                    className="font-heading text-lg tracking-wider"
-                    style={{ color: "hsl(39 100% 88%)" }}
-                  >
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent flex flex-col justify-end p-5">
+                  <h4 className="font-heading text-lg tracking-wider text-deep-red">
                     {photo.label}
                   </h4>
-                  <p
-                    className="font-body text-xs mt-1"
-                    style={{ color: "hsl(39 50% 65%)" }}
-                  >
+                  <p className="font-body text-xs mt-1 text-foreground/60">
                     {photo.desc}
                   </p>
                 </div>
