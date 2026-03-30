@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import SectionDivider from "@/components/SectionDivider";
+import RadhaKrishnaBackground from "@/components/RadhaKrishnaBackground";
 import groomImg from "@/assets/groom-portrait.jpg";
 import brideImg from "@/assets/bride-portrait.jpg";
 
@@ -7,6 +8,7 @@ const CoupleSection = () => {
   return (
     <section className="py-20 bg-temple-gradient relative">
       <div className="bg-sacred absolute inset-0" />
+      <RadhaKrishnaBackground />
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="text-center mb-16"

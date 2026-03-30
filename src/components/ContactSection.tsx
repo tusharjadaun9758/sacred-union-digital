@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import RadhaKrishnaBackground from "@/components/RadhaKrishnaBackground";
 
 const contacts = [
   { name: "Shri Mahesh Kumar", relation: "Father of the Groom", phone: "+91 98765 43210" },
@@ -8,6 +9,7 @@ const contacts = [
 const ContactSection = () => {
   return (
     <section className="py-20 relative bg-temple-gradient">
+      <RadhaKrishnaBackground />
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="text-center mb-12"

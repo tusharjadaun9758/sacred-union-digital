@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionDivider from "@/components/SectionDivider";
+import RadhaKrishnaBackground from "@/components/RadhaKrishnaBackground";
 
 import groomFamilyImg from "@/assets/groom-family.jpg";
 import brideFamilyImg from "@/assets/bride-family.jpg";
@@ -52,6 +53,7 @@ const FamilySection = () => {
   return (
     <section className="py-20 bg-temple-gradient relative overflow-hidden">
       <div className="bg-sacred absolute inset-0" />
+      <RadhaKrishnaBackground />
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="text-center mb-12"

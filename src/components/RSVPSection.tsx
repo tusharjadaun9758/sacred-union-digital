@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionDivider from "@/components/SectionDivider";
+import RadhaKrishnaBackground from "@/components/RadhaKrishnaBackground";
 
 const RSVPSection = () => {
   const [response, setResponse] = useState<"accepted" | "declined" | null>(null);
@@ -14,6 +15,7 @@ const RSVPSection = () => {
   return (
     <section className="py-20 bg-temple-gradient relative">
       <div className="bg-sacred absolute inset-0" />
+      <RadhaKrishnaBackground />
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="text-center mb-12"

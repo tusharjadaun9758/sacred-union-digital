@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionDivider from "@/components/SectionDivider";
+import RadhaKrishnaBackground from "@/components/RadhaKrishnaBackground";
 
 const events = [
   {
@@ -74,6 +75,7 @@ const EventsSection = () => {
 
   return (
     <section className="py-20 relative overflow-hidden bg-temple-gradient">
+      <RadhaKrishnaBackground />
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="text-center mb-12"
