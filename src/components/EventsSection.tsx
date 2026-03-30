@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { MapPin } from "lucide-react";
 import SectionDivider from "@/components/SectionDivider";
 import RadhaKrishnaBackground from "@/components/RadhaKrishnaBackground";
 
