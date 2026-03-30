@@ -47,7 +47,6 @@ const VenueSection = () => {
           <h2
             className="font-heading text-4xl md:text-6xl lg:text-7xl tracking-wider drop-shadow-xl text-deep-red"
           >
-          >
             The Royal Venue
           </h2>
           <div className="w-24 h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent mt-4" />
@@ -84,13 +83,11 @@ const VenueSection = () => {
           <p
             className="font-body text-sm md:text-base mb-2 italic text-muted-foreground"
           >
-          >
             A Heritage Royal Estate
           </p>
 
           <p
             className="font-body text-sm mb-8 text-foreground/70"
-          >
           >
             42, Palace Road, Jaipur, Rajasthan 302001
           </p>
