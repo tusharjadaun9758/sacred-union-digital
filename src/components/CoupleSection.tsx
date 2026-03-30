@@ -4,6 +4,7 @@ import RadhaKrishnaBackground from "@/components/RadhaKrishnaBackground";
 import PreWeddingGallery from "@/components/PreWeddingGallery";
 import groomImg from "@/assets/groom-portrait.jpg";
 import brideImg from "@/assets/bride-portrait.jpg";
+import radhaKrishnaImg from "@/assets/radha-krishna-bg.jpg";
 
 const CoupleSection = () => {
   return (
@@ -59,16 +60,35 @@ const CoupleSection = () => {
             </div>
           </motion.div>
 
-          {/* Center ornament */}
+          {/* Center ornament - Radha Krishna */}
           <motion.div
             className="flex flex-col items-center"
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0, rotateY: -180 }}
+            whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 1.2, delay: 0.4, type: "spring" as const, stiffness: 50 }}
+            style={{ perspective: 800 }}
           >
-            <span className="text-5xl mb-2">🪷</span>
-            <p className="font-shloka text-gold text-sm">&</p>
+            <motion.div
+              className="w-28 h-28 md:w-36 md:h-36 rounded-full border-4 border-gold/60 overflow-hidden shadow-lg"
+              style={{
+                transformStyle: "preserve-3d",
+                boxShadow: "0 10px 40px hsl(43 72% 52% / 0.3), 0 0 20px hsl(43 72% 52% / 0.15)",
+              }}
+              animate={{ rotateY: [0, 10, -10, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              whileHover={{ scale: 1.15, rotateY: 20 }}
+            >
+              <img
+                src={radhaKrishnaImg}
+                alt="Radha Krishna - Divine Love"
+                className="w-full h-full object-cover"
+                loading="lazy"
+                width={512}
+                height={512}
+              />
+            </motion.div>
+            <p className="font-shloka text-gold text-sm mt-2">&</p>
           </motion.div>
 
           {/* Bride */}
