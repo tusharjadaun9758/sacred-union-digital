@@ -93,14 +93,14 @@ const VenueSection = () => {
 
           <p
             className="font-body text-sm md:text-base mb-2 italic"
-            style={{ color: "hsl(39 100% 90%)" }}
+            style={{ color: "hsl(43 80% 60%)" }}
           >
             A Heritage Royal Estate
           </p>
 
           <p
             className="font-body text-sm mb-8"
-            style={{ color: "hsl(39 80% 80%)" }}
+            style={{ color: "hsl(43 72% 55%)" }}
           >
             42, Palace Road, Jaipur, Rajasthan 302001
           </p>
