@@ -33,7 +33,7 @@ const Index = () => {
   const CurrentComponent = sections[currentSection]?.component;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-temple-gradient">
       <GoldenParticles />
 
       {!entered ? (
