@@ -56,22 +56,33 @@ const VenueSection = () => {
       {/* Venue details card */}
       <div className="relative z-10 -mt-16 px-4">
         <motion.div
-          className="max-w-3xl mx-auto rounded-lg p-8 md:p-12 text-center border-ornate bg-card/80 backdrop-blur-sm"
+          className="max-w-3xl mx-auto rounded-lg p-8 md:p-12 text-center relative overflow-hidden"
           style={{
-            boxShadow: "0 30px 80px hsl(var(--deep-red) / 0.1), 0 0 60px hsl(var(--gold) / 0.08)",
+            background: "linear-gradient(145deg, hsl(0 80% 18% / 0.92), hsl(0 70% 14% / 0.95), hsl(0 80% 18% / 0.92))",
+            boxShadow: "0 30px 80px hsl(0 100% 10% / 0.4), 0 0 80px hsl(43 72% 52% / 0.15), inset 0 1px 0 hsl(43 80% 55% / 0.3)",
+            border: "2px solid hsl(43 72% 52% / 0.5)",
           }}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
+          {/* Gold corner ornaments */}
+          <div className="absolute top-3 left-3 w-10 h-10 border-t-2 border-l-2" style={{ borderColor: "hsl(43 80% 55% / 0.6)" }} />
+          <div className="absolute top-3 right-3 w-10 h-10 border-t-2 border-r-2" style={{ borderColor: "hsl(43 80% 55% / 0.6)" }} />
+          <div className="absolute bottom-3 left-3 w-10 h-10 border-b-2 border-l-2" style={{ borderColor: "hsl(43 80% 55% / 0.6)" }} />
+          <div className="absolute bottom-3 right-3 w-10 h-10 border-b-2 border-r-2" style={{ borderColor: "hsl(43 80% 55% / 0.6)" }} />
+          {/* Inner ornamental border */}
+          <div className="absolute inset-5 border rounded-sm pointer-events-none" style={{ borderColor: "hsl(43 72% 52% / 0.2)" }} />
+          {/* Subtle radial glow */}
+          <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at center, hsl(43 80% 55% / 0.08), transparent 70%)" }} />
           <div className="flex justify-center gap-10 mb-6">
             <Diya />
             <Diya />
           </div>
 
           <motion.h3
-            className="font-heading text-2xl md:text-3xl mb-2 text-deep-red"
+            className="font-heading text-2xl md:text-3xl mb-2 text-gradient-gold"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -81,13 +92,15 @@ const VenueSection = () => {
           </motion.h3>
 
           <p
-            className="font-body text-sm md:text-base mb-2 italic text-muted-foreground"
+            className="font-body text-sm md:text-base mb-2 italic"
+            style={{ color: "hsl(39 100% 90%)" }}
           >
             A Heritage Royal Estate
           </p>
 
           <p
-            className="font-body text-sm mb-8 text-foreground/70"
+            className="font-body text-sm mb-8"
+            style={{ color: "hsl(39 80% 80%)" }}
           >
             42, Palace Road, Jaipur, Rajasthan 302001
           </p>
@@ -98,7 +111,8 @@ const VenueSection = () => {
               (item, i) => (
                 <motion.span
                   key={item}
-                  className="px-4 py-2 rounded-full text-xs font-heading tracking-wider border border-gold/30 text-deep-red bg-gold/5"
+                  className="px-4 py-2 rounded-full text-xs font-heading tracking-wider border border-gold/40 bg-gold/10"
+                  style={{ color: "hsl(39 100% 90%)" }}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -116,7 +130,8 @@ const VenueSection = () => {
             rel="noopener noreferrer"
             className="inline-block font-heading text-sm tracking-[0.2em] uppercase
                        px-10 py-4 rounded-sm transition-all duration-500
-                       border-2 border-gold/50 text-deep-red hover:bg-gold/10"
+                       border-2 border-gold/50 hover:bg-gold/20"
+            style={{ color: "hsl(43 80% 65%)" }}
           >
             🗺️ Get Directions
           </a>
