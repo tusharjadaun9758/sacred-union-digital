@@ -82,7 +82,7 @@ const VenueSection = () => {
           </div>
 
           <motion.h3
-            className="font-heading text-2xl md:text-3xl mb-2 text-deep-red"
+            className="font-heading text-2xl md:text-3xl mb-2 text-gradient-gold"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -92,13 +92,15 @@ const VenueSection = () => {
           </motion.h3>
 
           <p
-            className="font-body text-sm md:text-base mb-2 italic text-muted-foreground"
+            className="font-body text-sm md:text-base mb-2 italic"
+            style={{ color: "hsl(39 100% 90%)" }}
           >
             A Heritage Royal Estate
           </p>
 
           <p
-            className="font-body text-sm mb-8 text-foreground/70"
+            className="font-body text-sm mb-8"
+            style={{ color: "hsl(39 80% 80%)" }}
           >
             42, Palace Road, Jaipur, Rajasthan 302001
           </p>
@@ -109,7 +111,8 @@ const VenueSection = () => {
               (item, i) => (
                 <motion.span
                   key={item}
-                  className="px-4 py-2 rounded-full text-xs font-heading tracking-wider border border-gold/30 text-deep-red bg-gold/5"
+                  className="px-4 py-2 rounded-full text-xs font-heading tracking-wider border border-gold/40 bg-gold/10"
+                  style={{ color: "hsl(39 100% 90%)" }}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -127,8 +130,8 @@ const VenueSection = () => {
             rel="noopener noreferrer"
             className="inline-block font-heading text-sm tracking-[0.2em] uppercase
                        px-10 py-4 rounded-sm transition-all duration-500
-                       border-2 border-gold/50 text-deep-red hover:bg-gold/10"
-          >
+                       border-2 border-gold/50 hover:bg-gold/20"
+            style={{ color: "hsl(43 80% 65%)" }}
             🗺️ Get Directions
           </a>
         </motion.div>
