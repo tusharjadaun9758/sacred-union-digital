@@ -56,14 +56,26 @@ const VenueSection = () => {
       {/* Venue details card */}
       <div className="relative z-10 -mt-16 px-4">
         <motion.div
-          className="max-w-3xl mx-auto rounded-lg p-8 md:p-12 text-center border-ornate bg-card/80 backdrop-blur-sm"
+          className="max-w-3xl mx-auto rounded-lg p-8 md:p-12 text-center relative overflow-hidden"
           style={{
-            boxShadow: "0 30px 80px hsl(var(--deep-red) / 0.1), 0 0 60px hsl(var(--gold) / 0.08)",
+            background: "linear-gradient(145deg, hsl(0 80% 18% / 0.92), hsl(0 70% 14% / 0.95), hsl(0 80% 18% / 0.92))",
+            boxShadow: "0 30px 80px hsl(0 100% 10% / 0.4), 0 0 80px hsl(43 72% 52% / 0.15), inset 0 1px 0 hsl(43 80% 55% / 0.3)",
+            border: "2px solid hsl(43 72% 52% / 0.5)",
           }}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+        >
+          {/* Gold corner ornaments */}
+          <div className="absolute top-3 left-3 w-10 h-10 border-t-2 border-l-2" style={{ borderColor: "hsl(43 80% 55% / 0.6)" }} />
+          <div className="absolute top-3 right-3 w-10 h-10 border-t-2 border-r-2" style={{ borderColor: "hsl(43 80% 55% / 0.6)" }} />
+          <div className="absolute bottom-3 left-3 w-10 h-10 border-b-2 border-l-2" style={{ borderColor: "hsl(43 80% 55% / 0.6)" }} />
+          <div className="absolute bottom-3 right-3 w-10 h-10 border-b-2 border-r-2" style={{ borderColor: "hsl(43 80% 55% / 0.6)" }} />
+          {/* Inner ornamental border */}
+          <div className="absolute inset-5 border rounded-sm pointer-events-none" style={{ borderColor: "hsl(43 72% 52% / 0.2)" }} />
+          {/* Subtle radial glow */}
+          <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at center, hsl(43 80% 55% / 0.08), transparent 70%)" }} />
         >
           <div className="flex justify-center gap-10 mb-6">
             <Diya />
