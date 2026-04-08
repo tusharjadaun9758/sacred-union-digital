@@ -132,6 +132,7 @@ const VenueSection = () => {
                        px-10 py-4 rounded-sm transition-all duration-500
                        border-2 border-gold/50 hover:bg-gold/20"
             style={{ color: "hsl(43 80% 65%)" }}
+          >
             🗺️ Get Directions
           </a>
         </motion.div>
