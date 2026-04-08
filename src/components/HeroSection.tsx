@@ -33,20 +33,109 @@ const HeroSection = ({ onEnter }: HeroSectionProps) => {
       <AnimatePresence>
         {doorsOpen && (
           <>
+            {/* Left Curtain */}
             <motion.div
-              className="absolute inset-y-0 left-0 w-1/2 z-20"
-              style={{ background: "linear-gradient(90deg, hsl(0 100% 20%), hsl(0 100% 27%))" }}
+              className="absolute inset-y-0 left-0 w-1/2 z-20 overflow-hidden"
               initial={{ x: 0 }}
               animate={{ x: "-100%" }}
               transition={{ duration: 1.8, ease: [0.76, 0, 0.24, 1] }}
-            />
+            >
+              <div
+                className="w-full h-full relative"
+                style={{
+                  background: "linear-gradient(90deg, hsl(0 80% 18%), hsl(0 90% 25%), hsl(0 80% 20%))",
+                }}
+              >
+                {/* Gold vertical border stripe */}
+                <div
+                  className="absolute top-0 right-0 w-[6px] h-full"
+                  style={{
+                    background: "linear-gradient(180deg, hsl(43 90% 55%), hsl(43 80% 45%), hsl(43 90% 60%), hsl(43 80% 45%), hsl(43 90% 55%))",
+                    boxShadow: "0 0 12px hsl(43 80% 50% / 0.6), -2px 0 8px hsl(43 80% 50% / 0.3)",
+                  }}
+                />
+                {/* Gold ornamental inner border */}
+                <div
+                  className="absolute inset-2 border-2 rounded-sm pointer-events-none"
+                  style={{
+                    borderColor: "hsl(43 72% 52% / 0.4)",
+                    boxShadow: "inset 0 0 20px hsl(43 72% 52% / 0.1)",
+                  }}
+                />
+                {/* Gold corner ornaments */}
+                <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2" style={{ borderColor: "hsl(43 80% 55% / 0.7)" }} />
+                <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2" style={{ borderColor: "hsl(43 80% 55% / 0.7)" }} />
+                <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2" style={{ borderColor: "hsl(43 80% 55% / 0.5)" }} />
+                <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2" style={{ borderColor: "hsl(43 80% 55% / 0.5)" }} />
+                {/* Velvet fold effect */}
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background: "repeating-linear-gradient(90deg, transparent, hsl(0 60% 15% / 0.3) 20%, transparent 40%)",
+                  }}
+                />
+                {/* Gold tassel at bottom */}
+                <div className="absolute bottom-0 right-0 w-full flex justify-end px-6 pb-4">
+                  <div className="flex gap-3">
+                    <div className="w-1 h-12 rounded-full" style={{ background: "linear-gradient(180deg, hsl(43 80% 55%), hsl(43 70% 40%))" }} />
+                    <div className="w-1 h-16 rounded-full" style={{ background: "linear-gradient(180deg, hsl(43 80% 55%), hsl(43 70% 40%))" }} />
+                    <div className="w-1 h-10 rounded-full" style={{ background: "linear-gradient(180deg, hsl(43 80% 55%), hsl(43 70% 40%))" }} />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Right Curtain */}
             <motion.div
-              className="absolute inset-y-0 right-0 w-1/2 z-20"
-              style={{ background: "linear-gradient(-90deg, hsl(0 100% 20%), hsl(0 100% 27%))" }}
+              className="absolute inset-y-0 right-0 w-1/2 z-20 overflow-hidden"
               initial={{ x: 0 }}
               animate={{ x: "100%" }}
               transition={{ duration: 1.8, ease: [0.76, 0, 0.24, 1] }}
-            />
+            >
+              <div
+                className="w-full h-full relative"
+                style={{
+                  background: "linear-gradient(-90deg, hsl(0 80% 18%), hsl(0 90% 25%), hsl(0 80% 20%))",
+                }}
+              >
+                {/* Gold vertical border stripe */}
+                <div
+                  className="absolute top-0 left-0 w-[6px] h-full"
+                  style={{
+                    background: "linear-gradient(180deg, hsl(43 90% 55%), hsl(43 80% 45%), hsl(43 90% 60%), hsl(43 80% 45%), hsl(43 90% 55%))",
+                    boxShadow: "0 0 12px hsl(43 80% 50% / 0.6), 2px 0 8px hsl(43 80% 50% / 0.3)",
+                  }}
+                />
+                {/* Gold ornamental inner border */}
+                <div
+                  className="absolute inset-2 border-2 rounded-sm pointer-events-none"
+                  style={{
+                    borderColor: "hsl(43 72% 52% / 0.4)",
+                    boxShadow: "inset 0 0 20px hsl(43 72% 52% / 0.1)",
+                  }}
+                />
+                {/* Gold corner ornaments */}
+                <div className="absolute top-4 left-4 w-8 h-8 border-t-2 border-l-2" style={{ borderColor: "hsl(43 80% 55% / 0.7)" }} />
+                <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2" style={{ borderColor: "hsl(43 80% 55% / 0.7)" }} />
+                <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2" style={{ borderColor: "hsl(43 80% 55% / 0.5)" }} />
+                <div className="absolute bottom-4 right-4 w-8 h-8 border-b-2 border-r-2" style={{ borderColor: "hsl(43 80% 55% / 0.5)" }} />
+                {/* Velvet fold effect */}
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background: "repeating-linear-gradient(90deg, transparent, hsl(0 60% 15% / 0.3) 20%, transparent 40%)",
+                  }}
+                />
+                {/* Gold tassel at bottom */}
+                <div className="absolute bottom-0 left-0 w-full flex justify-start px-6 pb-4">
+                  <div className="flex gap-3">
+                    <div className="w-1 h-10 rounded-full" style={{ background: "linear-gradient(180deg, hsl(43 80% 55%), hsl(43 70% 40%))" }} />
+                    <div className="w-1 h-16 rounded-full" style={{ background: "linear-gradient(180deg, hsl(43 80% 55%), hsl(43 70% 40%))" }} />
+                    <div className="w-1 h-12 rounded-full" style={{ background: "linear-gradient(180deg, hsl(43 80% 55%), hsl(43 70% 40%))" }} />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
             <motion.div
               className="absolute inset-0 z-10"
               initial={{ opacity: 0 }}
