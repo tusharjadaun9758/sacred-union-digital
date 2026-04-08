@@ -35,14 +35,14 @@ const HeroSection = ({ onEnter }: HeroSectionProps) => {
           <>
             <motion.div
               className="absolute inset-y-0 left-0 w-1/2 z-20"
-              style={{ background: "linear-gradient(90deg, #2a1a0a, #3d2815)" }}
+              style={{ background: "linear-gradient(90deg, hsl(0 100% 20%), hsl(0 100% 27%))" }}
               initial={{ x: 0 }}
               animate={{ x: "-100%" }}
               transition={{ duration: 1.8, ease: [0.76, 0, 0.24, 1] }}
             />
             <motion.div
               className="absolute inset-y-0 right-0 w-1/2 z-20"
-              style={{ background: "linear-gradient(-90deg, #2a1a0a, #3d2815)" }}
+              style={{ background: "linear-gradient(-90deg, hsl(0 100% 20%), hsl(0 100% 27%))" }}
               initial={{ x: 0 }}
               animate={{ x: "100%" }}
               transition={{ duration: 1.8, ease: [0.76, 0, 0.24, 1] }}
