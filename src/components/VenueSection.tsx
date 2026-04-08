@@ -76,7 +76,6 @@ const VenueSection = () => {
           <div className="absolute inset-5 border rounded-sm pointer-events-none" style={{ borderColor: "hsl(43 72% 52% / 0.2)" }} />
           {/* Subtle radial glow */}
           <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at center, hsl(43 80% 55% / 0.08), transparent 70%)" }} />
-        >
           <div className="flex justify-center gap-10 mb-6">
             <Diya />
             <Diya />
