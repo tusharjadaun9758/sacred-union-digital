@@ -178,4 +178,17 @@
   .animate-flame { animation: flame-dance 1s infinite ease-in-out; }
   .animate-pulse-glow { animation: pulse-glow 3s infinite ease-in-out; }
   .animate-scroll-unroll { animation: scroll-unroll 1s ease-out forwards; }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 25s linear infinite;
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
 }
